@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Industrial SaaS palette - professional slate blues */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    /* Deep industrial blue */
+    --primary: 222 47% 20%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 20% 93%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 222 47% 20%;
+
+    --radius: 0.5rem;
+
+    /* Status colors */
+    --status-pending: 215 14% 55%;
+    --status-enroute: 217 91% 60%;
+    --status-onsite: 25 95% 53%;
+    --status-completed: 142 71% 45%;
+    --status-available: 142 71% 45%;
+    --status-offline: 215 14% 55%;
+
+    /* KPI colors */
+    --kpi-blue: 217 91% 60%;
+    --kpi-orange: 25 95% 53%;
+    --kpi-green: 142 71% 45%;
+    --kpi-slate: 215 20% 45%;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 18%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 20%;
+    --sidebar-ring: 24 95% 53%;
+  }
+
+  .dark {
+    --background: 222 47% 8%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 24 95% 53%;
+
+    --sidebar-background: 222 47% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 47% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 222 30% 15%;
+    --sidebar-ring: 24 95% 53%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .status-pending {
+    @apply bg-[hsl(var(--status-pending))];
+  }
+  .status-enroute {
+    @apply bg-[hsl(var(--status-enroute))];
+  }
+  .status-onsite {
+    @apply bg-[hsl(var(--status-onsite))];
+  }
+  .status-completed {
+    @apply bg-[hsl(var(--status-completed))];
+  }
+  
+  .text-status-pending {
+    @apply text-[hsl(var(--status-pending))];
+  }
+  .text-status-enroute {
+    @apply text-[hsl(var(--status-enroute))];
+  }
+  .text-status-onsite {
+    @apply text-[hsl(var(--status-onsite))];
+  }
+  .text-status-completed {
+    @apply text-[hsl(var(--status-completed))];
+  }
+}
